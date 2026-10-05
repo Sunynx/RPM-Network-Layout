@@ -577,7 +577,8 @@ export default function TopologyPage() {
     
     if (nodesToSave.length === 1) {
       import("@/lib/activity-logger").then(({ logActivity }) => {
-        logActivity("MOVE", "DEVICE", node.data?.device?.name || "Device", node.id, { x: Math.round(node.position.x), y: Math.round(node.position.y) });
+        const deviceData = node.data?.device as any;
+        logActivity("MOVE", "DEVICE", deviceData?.name || "Device", node.id, { x: Math.round(node.position.x), y: Math.round(node.position.y) });
       });
     }
   }, []);
