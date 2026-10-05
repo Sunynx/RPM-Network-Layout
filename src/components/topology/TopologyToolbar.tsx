@@ -1,7 +1,9 @@
 "use client";
 
-import { ArrowDownUp, ArrowLeftRight, Save, Loader2 } from "lucide-react";
+import { ArrowDownUp, ArrowLeftRight, Save, Loader2, Camera } from "lucide-react";
 import { useState } from "react";
+import { toPng } from "html-to-image";
+import download from "downloadjs";
 
 interface TopologyToolbarProps {
   onAutoLayout: (direction: "TB" | "LR") => void;
@@ -33,6 +35,31 @@ export default function TopologyToolbar({
     } finally {
       setSaving(false);
     }
+  };
+
+  const handleExportImage = () => {
+    const el = document.querySelector(".react-flow") as HTMLElement;
+    if (!el) return;
+    toPng(el, {
+      filter: (node) => {
+        // Exclude UI controls from the screenshot
+        if (
+          node?.classList?.contains("react-flow__controls") ||
+          node?.classList?.contains("react-flow__minimap") ||
+          node?.classList?.contains("react-flow__panel")
+        ) {
+          return false;
+        }
+        return true;
+      },
+      backgroundColor: "var(--bg-primary)"
+    })
+      .then((dataUrl) => {
+        download(dataUrl, `network-topology-${new Date().toISOString().split("T")[0]}.png`);
+      })
+      .catch((err) => {
+        console.error("Failed to export image", err);
+      });
   };
 
   return (
@@ -111,6 +138,16 @@ export default function TopologyToolbar({
       </div>
 
       <div className="w-px h-5 mx-1" style={{ background: "var(--border-color)" }} />
+
+      <button
+        onClick={handleExportImage}
+        className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors hover:bg-slate-500/10 hover:text-slate-400"
+        style={{ color: "var(--text-secondary)" }}
+        title="Export as PNG"
+      >
+        <Camera className="w-3.5 h-3.5" />
+        <span className="hidden sm:inline">Export PNG</span>
+      </button>
 
       <button
         onClick={handleSave}
