@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th" suppressHydrationWarning>
-      <body className="min-h-screen antialiased overflow-x-hidden overscroll-none">
+      <body className="min-h-screen antialiased">
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
