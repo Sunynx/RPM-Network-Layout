@@ -46,13 +46,13 @@ export default function DeviceToolbar({
             style={{ background: "var(--bg-primary)", borderColor: "var(--border-color)", color: "var(--text-primary)" }}
           />
         </div>
-        <div className="flex items-center gap-3">
-          <div className="relative">
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="relative flex-1 min-w-[140px]">
             <Filter className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2" style={{ color: "var(--text-muted)" }} />
             <select
               value={filterType}
               onChange={(e) => setFilterType(e.target.value)}
-              className="pl-9 pr-8 py-2.5 rounded-xl text-sm border outline-none appearance-none"
+              className="pl-9 pr-8 py-2.5 w-full rounded-xl text-sm border outline-none appearance-none"
               style={{ background: "var(--bg-primary)", borderColor: "var(--border-color)", color: "var(--text-primary)" }}
             >
               <option value="ALL">ทุกประเภท (Type)</option>
@@ -61,12 +61,12 @@ export default function DeviceToolbar({
               ))}
             </select>
           </div>
-          <div className="relative">
+          <div className="relative flex-1 min-w-[140px]">
             <Filter className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2" style={{ color: "var(--text-muted)" }} />
             <select
               value={filterStatus}
               onChange={(e) => setFilterStatus(e.target.value)}
-              className="pl-9 pr-8 py-2.5 rounded-xl text-sm border outline-none appearance-none"
+              className="pl-9 pr-8 py-2.5 w-full rounded-xl text-sm border outline-none appearance-none"
               style={{ background: "var(--bg-primary)", borderColor: "var(--border-color)", color: "var(--text-primary)" }}
             >
               <option value="ALL">ทุกสถานะ (Status)</option>
@@ -79,7 +79,7 @@ export default function DeviceToolbar({
       </div>
 
       {/* Actions */}
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         <label className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium border cursor-pointer hover:bg-[var(--bg-secondary)] transition-colors" style={{ borderColor: "var(--border-color)", color: "var(--text-secondary)" }}>
           <Upload className="w-4 h-4" />
           <span className="hidden sm:inline">นำเข้า CSV</span>

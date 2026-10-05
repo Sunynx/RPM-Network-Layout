@@ -29,7 +29,7 @@ export default function DeviceTable({ devices, onEdit, onDelete }: DeviceTablePr
   return (
     <div className="glass-card overflow-hidden">
       <div className="overflow-x-auto">
-        <table className="w-full text-sm">
+        <table className="w-full min-w-[900px] text-sm">
           <thead>
             <tr className="border-b" style={{ borderColor: "var(--border-color)", background: "var(--bg-secondary)" }}>
               <th className="text-left py-4 px-5 font-semibold text-[var(--text-secondary)]">อุปกรณ์ (Device)</th>

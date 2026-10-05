@@ -37,7 +37,7 @@ export default function TopologyToolbar({
 
   return (
     <div
-      className="flex items-center gap-1 px-2 py-1.5 rounded-xl"
+      className="flex flex-wrap items-center gap-2 px-2 py-1.5 rounded-xl"
       style={{
         background: "var(--bg-card)",
         border: "1px solid var(--border-color)",
