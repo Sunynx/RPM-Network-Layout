@@ -7,6 +7,8 @@ import { useSupabaseQuery } from "@/hooks/use-supabase-query";
 import { useToast } from "@/components/ui/Toast";
 import type { Device } from "@/types/network";
 import { logActivity } from "@/lib/activity-logger";
+import { formatDistanceToNow } from "date-fns";
+import { th } from "date-fns/locale";
 
 import DeviceToolbar from "@/components/devices/DeviceToolbar";
 import DeviceTable from "@/components/devices/DeviceTable";
@@ -29,6 +31,7 @@ export default function DevicesPage() {
   const { data: devices, loading, refetch } = useSupabaseQuery<Device>("devices", { orderBy: "name" });
   const { data: vlans } = useSupabaseQuery<any>("vlans", { orderBy: "vlan_number" });
   const { data: racks } = useSupabaseQuery<any>("racks", { orderBy: "name" });
+  const { data: syncLogs } = useSupabaseQuery<any>("activity_logs", { orderBy: "created_at" });
   const { addToast } = useToast();
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -40,6 +43,18 @@ export default function DevicesPage() {
   const [formData, setFormData] = useState<DeviceFormData>(emptyForm);
   const [saving, setSaving] = useState(false);
   const [syncingRuijie, setSyncingRuijie] = useState(false);
+
+  const lastSyncTime = useMemo(() => {
+    if (!syncLogs || syncLogs.length === 0) return null;
+    const syncs = syncLogs.filter((l: any) => l.action === "SYNC");
+    if (syncs.length === 0) return null;
+    const latest = syncs[syncs.length - 1].created_at;
+    try {
+      return formatDistanceToNow(new Date(latest), { addSuffix: true, locale: th });
+    } catch (e) {
+      return null;
+    }
+  }, [syncLogs]);
 
   // Filters
   const filteredDevices = useMemo(() => {
@@ -232,6 +247,7 @@ export default function DevicesPage() {
           onExportCSV={handleExportCSV}
           onSyncRuijie={handleSyncRuijie}
           syncingRuijie={syncingRuijie}
+          lastSyncTime={lastSyncTime}
         />
 
         <DeviceTable

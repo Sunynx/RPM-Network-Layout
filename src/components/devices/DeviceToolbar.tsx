@@ -16,6 +16,7 @@ interface DeviceToolbarProps {
   onExportCSV: () => void;
   onSyncRuijie: () => void;
   syncingRuijie: boolean;
+  lastSyncTime?: string | null;
 }
 
 export default function DeviceToolbar({
@@ -30,6 +31,7 @@ export default function DeviceToolbar({
   onExportCSV,
   onSyncRuijie,
   syncingRuijie,
+  lastSyncTime,
 }: DeviceToolbarProps) {
   return (
     <div className="flex flex-col xl:flex-row gap-4 xl:items-center justify-between glass-card p-4">
@@ -79,7 +81,7 @@ export default function DeviceToolbar({
       </div>
 
       {/* Actions */}
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2 relative pb-2 sm:pb-0">
         <label className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium border cursor-pointer hover:bg-[var(--bg-secondary)] transition-colors" style={{ borderColor: "var(--border-color)", color: "var(--text-secondary)" }}>
           <Upload className="w-4 h-4" />
           <span className="hidden sm:inline">นำเข้า CSV</span>
@@ -91,14 +93,21 @@ export default function DeviceToolbar({
           <span className="hidden sm:inline">ส่งออก CSV</span>
         </button>
 
-        <button
-          onClick={onSyncRuijie}
-          disabled={syncingRuijie}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-blue-500 hover:bg-blue-600 text-white transition-colors disabled:opacity-50"
-        >
-          {syncingRuijie ? <Loader2 className="w-4 h-4 animate-spin" /> : <Cloud className="w-4 h-4" />}
-          <span className="hidden sm:inline">Sync Ruijie</span>
-        </button>
+        <div className="flex flex-col items-end">
+          <button
+            onClick={onSyncRuijie}
+            disabled={syncingRuijie}
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-blue-500 hover:bg-blue-600 text-white transition-colors disabled:opacity-50"
+          >
+            {syncingRuijie ? <Loader2 className="w-4 h-4 animate-spin" /> : <Cloud className="w-4 h-4" />}
+            <span className="hidden sm:inline">Sync Ruijie</span>
+          </button>
+          {lastSyncTime && (
+            <span className="text-[10px] text-slate-400 mt-1 px-1 hidden sm:block absolute -bottom-4">
+              ซิงค์ล่าสุด: {lastSyncTime}
+            </span>
+          )}
+        </div>
 
         <button onClick={onAdd} className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-500 hover:bg-blue-600 text-white transition-colors shadow-lg shadow-blue-500/20">
           <Plus className="w-5 h-5" />

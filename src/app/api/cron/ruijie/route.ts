@@ -183,6 +183,19 @@ export async function GET(request: Request) {
       }
     }
 
+    // Log the sync activity so the frontend can know the last sync time
+    await supabase.from("activity_logs").insert({
+      action: "SYNC",
+      entity_type: "DEVICE",
+      entity_name: "Ruijie Auto Sync (Cron)",
+      details: {
+        updated: updatedCount,
+        inserted: insertedCount,
+        offline_alerts_generated: offlineAlerts,
+        total: devicesArray.length,
+      }
+    });
+
     return NextResponse.json({
       success: true,
       updated: updatedCount,
