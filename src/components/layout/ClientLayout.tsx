@@ -37,7 +37,7 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
             setMobileOpen={setMobileOpen}
           />
           <div 
-            className={`flex-1 transition-all duration-300 flex flex-col min-h-screen ${
+            className={`flex-1 transition-all w-full max-w-full min-w-0 overflow-x-hidden duration-300 flex flex-col min-h-screen ${
               collapsed ? "lg:ml-[72px]" : "lg:ml-[260px]"
             }`}
           >
