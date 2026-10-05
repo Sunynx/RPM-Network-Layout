@@ -39,7 +39,7 @@ export default function PortMappingModal({ isOpen, onClose, device }: PortMappin
 
       if (error && error.code !== '42703') throw error; // Ignore column not found error temporarily
       
-      const transformed = (data || []).map(conn => {
+      const transformed = (data || []).map((conn: any) => {
         const isSource = conn.from_device.id === device?.id;
         return {
           id: conn.id,
@@ -51,7 +51,7 @@ export default function PortMappingModal({ isOpen, onClose, device }: PortMappin
         };
       });
       
-      transformed.sort((a, b) => {
+      transformed.sort((a: any, b: any) => {
         if (!a.localPort) return 1;
         if (!b.localPort) return -1;
         return a.localPort.localeCompare(b.localPort, undefined, { numeric: true, sensitivity: 'base' });

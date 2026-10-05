@@ -6,6 +6,7 @@ import { CONNECTION_TYPES, type ConnectionMediaType } from "@/lib/constants";
 
 interface ConnectionModalProps {
   isOpen: boolean;
+  onClose: () => void;
   onConfirm: (type: ConnectionMediaType, label?: string, vlanId?: string | null, sourcePort?: string, targetPort?: string) => void;
   onDelete?: () => void;
   mode: "create" | "edit";
