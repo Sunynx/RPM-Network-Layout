@@ -1,0 +1,433 @@
+{
+  "AB": [
+    {
+      "port": "Port 2",
+      "target": "DocA8",
+      "targetType": "AP"
+    },
+    {
+      "port": "Port 5",
+      "target": "Fueldock",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "SW-01-Abutment-Right",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "SW-02-Abatment-Left",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "E",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "M-CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "SW-03-Security_Drystack",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "CD",
+      "targetType": "SWITCH"
+    }
+  ],
+  "CD": [
+    {
+      "port": "Port 1",
+      "target": "DocD12",
+      "targetType": "AP"
+    },
+    {
+      "port": "Port 5",
+      "target": "Fueldock",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "SW-01-Abutment-Right",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "SW-02-Abatment-Left",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "E",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "AB",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "M-CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 5",
+      "target": "SW-03-Security_Drystack",
+      "targetType": "SWITCH"
+    }
+  ],
+  "E": [
+    {
+      "port": "Port 10",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "SW-01-Abutment-Right",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "SW-03-Security_Drystack",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "SW-02-Abatment-Left",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "M-CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "Fueldock",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "AB",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 3",
+      "target": "SalaDorkE",
+      "targetType": "AP"
+    },
+    {
+      "port": "Port 4",
+      "target": "DocE4",
+      "targetType": "AP"
+    },
+    {
+      "port": "Port 5",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 6",
+      "target": "E7",
+      "targetType": "AP"
+    }
+  ],
+  "Fueldock": [
+    {
+      "port": "Port 19",
+      "target": "AB",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 19",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 19",
+      "target": "SW-02-Abatment-Left",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 19",
+      "target": "E",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 19",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 19",
+      "target": "SW-03-Security_Drystack",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 19",
+      "target": "SW-01-Abutment-Right",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 19",
+      "target": "M-CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 19",
+      "target": "CD",
+      "targetType": "SWITCH"
+    }
+  ],
+  "M-CD": [
+    {
+      "port": "Gi10",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Gi10",
+      "target": "E",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Gi2",
+      "target": "D4",
+      "targetType": "AP"
+    },
+    {
+      "port": "Gi4",
+      "target": "AB",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Gi6",
+      "target": "CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Gi7",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Gi7",
+      "target": "SW-03-Security_Drystack",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Gi7",
+      "target": "SW-01-Abutment-Right",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Gi7",
+      "target": "SW-02-Abatment-Left",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Gi7",
+      "target": "Fueldock",
+      "targetType": "SWITCH"
+    }
+  ],
+  "SW-01-Abutment-Right": [
+    {
+      "port": "Port 1",
+      "target": "AB",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 1",
+      "target": "CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 1",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 1",
+      "target": "E",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 1",
+      "target": "M-CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "SW-03-Security_Drystack",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 9",
+      "target": "Fueldock",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 9",
+      "target": "SW-02-Abatment-Left",
+      "targetType": "SWITCH"
+    }
+  ],
+  "SW-02-Abatment-Left": [
+    {
+      "port": "Port 1",
+      "target": "Fueldock",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 3",
+      "target": "AB",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 3",
+      "target": "M-CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 3",
+      "target": "CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 3",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 3",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 3",
+      "target": "SW-03-Security_Drystack",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 3",
+      "target": "SW-01-Abutment-Right",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 3",
+      "target": "E",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 4",
+      "target": "TvAbatment",
+      "targetType": "AP"
+    },
+    {
+      "port": "Port 5",
+      "target": "TvMC3",
+      "targetType": "AP"
+    },
+    {
+      "port": "Port 8",
+      "target": "WIFI-Marina",
+      "targetType": "AP"
+    },
+    {
+      "port": "Port 8",
+      "target": "WIFI-Admin",
+      "targetType": "AP"
+    }
+  ],
+  "SW-03-Security_Drystack": [
+    {
+      "port": "Port 10",
+      "target": "M-CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "CD",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "Fueldock",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "AB",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "SW-01-Abutment-Right",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "E",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 10",
+      "target": "SW-02-Abatment-Left",
+      "targetType": "SWITCH"
+    },
+    {
+      "port": "Port 7",
+      "target": "APGardHouseFront",
+      "targetType": "AP"
+    },
+    {
+      "port": "Port 9",
+      "target": "ruijie",
+      "targetType": "SWITCH"
+    }
+  ]
+}

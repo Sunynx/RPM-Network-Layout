@@ -1,0 +1,184 @@
+[
+  {
+    "from_device_id": "57155aa3-e746-456a-9de1-7c4753885787",
+    "to_device_id": "c0267270-e851-4ad6-a411-e444cea23ab7",
+    "source_port_name": "Port 2",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "1b89ac6f-b72d-485d-8f0e-88189eba056a",
+    "to_device_id": "070adf84-1877-4674-a4fc-4e00a9d57eaf",
+    "source_port_name": "Port 1",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "1b89ac6f-b72d-485d-8f0e-88189eba056a",
+    "to_device_id": "6488a957-e407-4a90-a467-fd4f8f293c7a",
+    "source_port_name": "Port 3",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6488a957-e407-4a90-a467-fd4f8f293c7a",
+    "to_device_id": "1b89ac6f-b72d-485d-8f0e-88189eba056a",
+    "source_port_name": "Port 9",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "c9718eea-7559-4ac6-91b6-863fc2d3d24e",
+    "to_device_id": "6d2d6643-9871-4853-8e35-9fd5a7daece9",
+    "source_port_name": "Gi10",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6d2d6643-9871-4853-8e35-9fd5a7daece9",
+    "to_device_id": "ad6edace-39d5-4c12-be67-6a19f4e05a87",
+    "source_port_name": "Port 3",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6d2d6643-9871-4853-8e35-9fd5a7daece9",
+    "to_device_id": "3bc5ba7d-e907-4633-b2af-e29a8f17affb",
+    "source_port_name": "Port 5",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "3f62bb65-ab3b-4de8-b86d-34b77205706f",
+    "to_device_id": "02c4b999-86f6-44c1-bc9a-e4495fc92d27",
+    "source_port_name": "Port 9",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6d2d6643-9871-4853-8e35-9fd5a7daece9",
+    "to_device_id": "d47d601a-baf7-47e3-83b1-42f5cc276cd5",
+    "source_port_name": "Port 5",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6488a957-e407-4a90-a467-fd4f8f293c7a",
+    "to_device_id": "c9718eea-7559-4ac6-91b6-863fc2d3d24e",
+    "source_port_name": "Port 1",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "3f62bb65-ab3b-4de8-b86d-34b77205706f",
+    "to_device_id": "4b298ba6-bfb7-40f7-bb1c-f167f6454d6b",
+    "source_port_name": "Port 7",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6d2d6643-9871-4853-8e35-9fd5a7daece9",
+    "to_device_id": "2d4ffe04-6ffd-4df8-8a35-1458a989df93",
+    "source_port_name": "Port 6",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "c9718eea-7559-4ac6-91b6-863fc2d3d24e",
+    "to_device_id": "73b83ed5-e3b0-41e5-b4fd-d0d5768a21e0",
+    "source_port_name": "Gi2",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6488a957-e407-4a90-a467-fd4f8f293c7a",
+    "to_device_id": "8d8c6f5e-dc31-448d-a925-5dbdfebb38d3",
+    "source_port_name": "Port 10",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6488a957-e407-4a90-a467-fd4f8f293c7a",
+    "to_device_id": "3f62bb65-ab3b-4de8-b86d-34b77205706f",
+    "source_port_name": "Port 10",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6d2d6643-9871-4853-8e35-9fd5a7daece9",
+    "to_device_id": "062ca677-5f75-4d3c-9698-13ae18ffe602",
+    "source_port_name": "Port 5",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6d2d6643-9871-4853-8e35-9fd5a7daece9",
+    "to_device_id": "1a062726-a869-43ba-8bb1-36d4f09fe8e9",
+    "source_port_name": "Port 4",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "c9718eea-7559-4ac6-91b6-863fc2d3d24e",
+    "to_device_id": "029a609a-2793-4fd8-a539-098990aa08f7",
+    "source_port_name": "Gi6",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "1b89ac6f-b72d-485d-8f0e-88189eba056a",
+    "to_device_id": "2e853171-1672-40db-bba9-4b6515436f4e",
+    "source_port_name": "Port 5",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "c9718eea-7559-4ac6-91b6-863fc2d3d24e",
+    "to_device_id": "a5a46220-06c8-4034-9cf6-e8710ea1d7cf",
+    "source_port_name": "Gi6",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "6488a957-e407-4a90-a467-fd4f8f293c7a",
+    "to_device_id": "f6db5a88-703f-48ae-920b-dbf623841504",
+    "source_port_name": "Port 9",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "3f62bb65-ab3b-4de8-b86d-34b77205706f",
+    "to_device_id": "eb1597a2-9814-428c-a7d4-88ad327d9787",
+    "source_port_name": "Port 9",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "1b89ac6f-b72d-485d-8f0e-88189eba056a",
+    "to_device_id": "fff416ed-1c88-4f81-b53d-a7ed4380730d",
+    "source_port_name": "Port 4",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "3f62bb65-ab3b-4de8-b86d-34b77205706f",
+    "to_device_id": "d8e057fd-ea97-4afc-886d-4c11dd3fa0a9",
+    "source_port_name": "Port 9",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "c9718eea-7559-4ac6-91b6-863fc2d3d24e",
+    "to_device_id": "57155aa3-e746-456a-9de1-7c4753885787",
+    "source_port_name": "Gi4",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  },
+  {
+    "from_device_id": "1b89ac6f-b72d-485d-8f0e-88189eba056a",
+    "to_device_id": "1179572f-8ecf-4e8f-a3f4-292562f4f15d",
+    "source_port_name": "Port 8",
+    "target_port_name": "WAN",
+    "type": "ETHERNET"
+  }
+]
