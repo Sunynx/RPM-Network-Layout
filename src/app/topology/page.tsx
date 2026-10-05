@@ -328,7 +328,7 @@ export default function TopologyPage() {
               .filter(pn => activeIds.has(pn.id))
               .map(pn => {
                  const updated = flowNodes.find(fn => fn.id === pn.id)!;
-                 return { ...pn, data: updated.data, type: updated.type };
+                 return { ...pn, data: updated.data, type: updated.type } as any;
               })
               .concat(flowNodes.filter(n => !prevNodes.some(pn => pn.id === n.id)));
           });
@@ -563,7 +563,7 @@ export default function TopologyPage() {
     addToast({ type: "success", title: "บันทึกสำเร็จ", message: "บันทึกตำแหน่งของอุปกรณ์ทั้งหมดแล้ว" });
   }, [nodes, addToast]);
 
-  const onNodeDragStop = useCallback(async (_: React.MouseEvent, node: Node, draggedNodes: Node[]) => {
+  const onNodeDragStop = useCallback(async (_: any, node: Node, draggedNodes: Node[]) => {
     const supabase = createClient();
     const nodesToSave = draggedNodes && draggedNodes.length > 0 ? draggedNodes : [node];
     
