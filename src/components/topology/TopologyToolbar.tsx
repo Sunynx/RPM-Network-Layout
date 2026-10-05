@@ -3,7 +3,6 @@
 import { ArrowDownUp, ArrowLeftRight, Save, Loader2, Camera } from "lucide-react";
 import { useState } from "react";
 import { toPng } from "html-to-image";
-import download from "downloadjs";
 
 interface TopologyToolbarProps {
   onAutoLayout: (direction: "TB" | "LR") => void;
@@ -55,7 +54,10 @@ export default function TopologyToolbar({
       backgroundColor: "var(--bg-primary)"
     })
       .then((dataUrl) => {
-        download(dataUrl, `network-topology-${new Date().toISOString().split("T")[0]}.png`);
+        const a = document.createElement("a");
+        a.href = dataUrl;
+        a.download = `network-topology-${new Date().toISOString().split("T")[0]}.png`;
+        a.click();
       })
       .catch((err) => {
         console.error("Failed to export image", err);
