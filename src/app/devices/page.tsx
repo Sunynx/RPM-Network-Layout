@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/client";
 import { useSupabaseQuery } from "@/hooks/use-supabase-query";
 import { useToast } from "@/components/ui/Toast";
 import type { Device } from "@/types/network";
+import { logActivity } from "@/lib/activity-logger";
 
 import DeviceToolbar from "@/components/devices/DeviceToolbar";
 import DeviceTable from "@/components/devices/DeviceTable";
@@ -87,6 +88,7 @@ export default function DevicesPage() {
     if (error) {
       addToast({ type: "error", title: "ลบอุปกรณ์ล้มเหลว", message: error.message });
     } else {
+      logActivity("DELETE", "DEVICE", name, id);
       addToast({ type: "success", title: "ลบอุปกรณ์สำเร็จ", message: `ลบ ${name} เรียบร้อย` });
     }
   };
@@ -100,10 +102,13 @@ export default function DevicesPage() {
       if (editingId) {
         const { error } = await supabase.from("devices").update(formData).eq("id", editingId);
         if (error) throw error;
+        logActivity("UPDATE", "DEVICE", formData.name, editingId, formData);
         addToast({ type: "success", title: "แก้ไขสำเร็จ", message: `บันทึกข้อมูล ${formData.name} เรียบร้อย` });
       } else {
-        const { error } = await supabase.from("devices").insert([formData]);
+        const { data, error } = await supabase.from("devices").insert([formData]).select();
         if (error) throw error;
+        const newId = data?.[0]?.id;
+        logActivity("CREATE", "DEVICE", formData.name, newId, formData);
         addToast({ type: "success", title: "เพิ่มอุปกรณ์สำเร็จ", message: `เพิ่ม ${formData.name} เข้าสู่ระบบเรียบร้อย` });
       }
       setShowForm(false);
@@ -143,6 +148,7 @@ export default function DevicesPage() {
           if (error) {
             addToast({ type: "error", title: "นำเข้าล้มเหลว", message: error.message });
           } else {
+            logActivity("CREATE", "DEVICE", "CSV Import", null, { count: devicesToInsert.length });
             addToast({ type: "success", title: "นำเข้าสำเร็จ", message: `นำเข้า ${devicesToInsert.length} อุปกรณ์สำเร็จ` });
           }
         }
@@ -181,6 +187,9 @@ export default function DevicesPage() {
       const res = await fetch("/api/ruijie/sync", { method: "POST" });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || data.message || "Unknown error");
+      
+      logActivity("SYNC", "DEVICE", "Ruijie API Sync", null, data);
+      
       addToast({
         type: "success",
         title: "ซิงค์ข้อมูลสำเร็จ",

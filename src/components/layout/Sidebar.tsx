@@ -14,6 +14,7 @@ import {
   ChevronRight,
   X,
   AlertTriangle,
+  Activity,
 } from "lucide-react";
 
 const navItems = [
@@ -24,6 +25,7 @@ const navItems = [
   { href: "/floor-plan", label: "Floor Plan", icon: Map },
   { href: "/ipam", label: "IPAM", icon: Globe },
   { href: "/logs", label: "Logs & Alarms", icon: AlertTriangle },
+  { href: "/activity", label: "Activity Logs", icon: Activity },
 ];
 
 interface SidebarProps {

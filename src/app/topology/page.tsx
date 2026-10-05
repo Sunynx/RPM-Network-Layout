@@ -574,6 +574,12 @@ export default function TopologyPage() {
         .eq("id", n.id)
     );
     await Promise.all(updates);
+    
+    if (nodesToSave.length === 1) {
+      import("@/lib/activity-logger").then(({ logActivity }) => {
+        logActivity("MOVE", "DEVICE", node.data?.device?.name || "Device", node.id, { x: Math.round(node.position.x), y: Math.round(node.position.y) });
+      });
+    }
   }, []);
 
   const onReconnect = useCallback(
