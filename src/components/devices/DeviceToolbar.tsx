@@ -81,7 +81,7 @@ export default function DeviceToolbar({
       </div>
 
       {/* Actions */}
-      <div className="flex flex-wrap items-center gap-2 relative pb-2 sm:pb-0">
+      <div className="flex flex-wrap items-center gap-2 relative pb-4">
         <label className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium border cursor-pointer hover:bg-[var(--bg-secondary)] transition-colors" style={{ borderColor: "var(--border-color)", color: "var(--text-secondary)" }}>
           <Upload className="w-4 h-4" />
           <span className="hidden sm:inline">นำเข้า CSV</span>
@@ -93,7 +93,7 @@ export default function DeviceToolbar({
           <span className="hidden sm:inline">ส่งออก CSV</span>
         </button>
 
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-center justify-center relative">
           <button
             onClick={onSyncRuijie}
             disabled={syncingRuijie}
@@ -102,11 +102,9 @@ export default function DeviceToolbar({
             {syncingRuijie ? <Loader2 className="w-4 h-4 animate-spin" /> : <Cloud className="w-4 h-4" />}
             <span className="hidden sm:inline">Sync Ruijie</span>
           </button>
-          {lastSyncTime && (
-            <span className="text-[10px] text-slate-400 mt-1 px-1 hidden sm:block absolute -bottom-4">
-              ซิงค์ล่าสุด: {lastSyncTime}
-            </span>
-          )}
+          <span className="text-[10px] text-slate-400 mt-1 absolute -bottom-4 whitespace-nowrap">
+            ล่าสุด: {lastSyncTime || "ยังไม่มีข้อมูล"}
+          </span>
         </div>
 
         <button onClick={onAdd} className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-500 hover:bg-blue-600 text-white transition-colors shadow-lg shadow-blue-500/20">
