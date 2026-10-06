@@ -1,0 +1,16 @@
+name: Ruijie Auto Sync
+
+on:
+  schedule:
+    # รันทุกๆ 15 นาที
+    - cron: '*/15 * * * *'
+  workflow_dispatch: # อนุญาตให้กดรันเองผ่านเว็บ GitHub ได้ด้วย
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Sync API
+        run: |
+          curl -X GET "${{ secrets.VERCEL_APP_URL }}/api/cron/ruijie" \
+          -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"
